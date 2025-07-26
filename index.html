@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <!-- Link to the stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts - Inter for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Requirement 1: Page title in an H1 element with an ID of title -->
+        <h1 id="title">The Fishing Survery Form</h1>
+        <!-- Requirement 2: Short explanation in a P element with an ID of description -->
+        <p id="description">Thank you for taking the time to share your fishing expereince!</p>
+
+        <!-- Requirement 3: Form element with an ID of survey-form -->
+        <form id="survey-form">
+            <div class="form-group">
+                <!-- Requirement 10: Label for name input -->
+                <label id="name-label" for="name">Name</label>
+                <!-- Requirement 4 & 11: Input field for name with ID of name, type text, and placeholder -->
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control"
+                    placeholder="Enter your name"
+                    required
+                />
+            </div>
+
+            <div class="form-group">
+                <!-- Requirement 10: Label for email input -->
+                <label id="email-label" for="email">Email</label>
+                <!-- Requirement 5, 6 & 11: Input field for email with ID of email, type email, and placeholder -->
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter your Email"
+                    required
+                />
+            </div>
+
+            <div class="form-group">
+                <!-- Requirement 10: Label for number input -->
+                <label id="number-label" for="number">Age (optional)</label>
+                <!-- Requirement 7, 8, 9 & 11: Input field for number with ID of number, type number, min/max, and placeholder -->
+                <input
+                    type="number"
+                    name="age"
+                    id="number"
+                    min="10"
+                    max="99"
+                    class="form-control"
+                    placeholder="Age"
+                />
+            </div>
+
+            <div class="form-group">
+                <!-- Requirement 12: Select dropdown element with an ID of dropdown and at least two options -->
+                <label for="dropdown">Which option best describes your level of fishing experience</label>
+                <select id="dropdown" name="role" class="form-control" required>
+                    <option disabled selected value>Select current skill level</option>
+                    <option value="noob">noob</option>
+                    <option value="UNseasoned Veteran">UNseasoned Veteran</option>
+                    <option value="Professional">Professional</option>
+                    <option value="Seasoned Veteran">Seasoned Veteran</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <!-- Requirement 13: Group of at least two radio buttons -->
+                <label>Do you prefer to fish alone?</label>
+                <label>
+                    <input
+                        name="user-recommend"
+                        value="always"
+                        type="radio"
+                        class="input-radio"
+                        checked
+                    />Always
+                </label>
+                <label>
+                    <input
+                        name="user-recommend"
+                        value="never"
+                        type="radio"
+                        class="input-radio"
+                    />Never
+                </label>
+                <label>
+                    <input
+                        name="user-recommend"
+                        value="it-depends"
+                        type="radio"
+                        class="input-radio"
+                    />It depends
+                </label>
+            </div>
+
+            <div class="form-group">
+                <!-- Requirement 14: Series of checkboxes, each with a value attribute -->
+                <label>What type of fishing do you do? (Check all that apply)</label>
+                <label>
+                    <input
+                        name="prefer"
+                        value="jetty"
+                        type="checkbox"
+                        class="input-checkbox"
+                    />Jetty
+                </label>
+                <label>
+                    <input
+                        name="prefer"
+                        value="surf"
+                        type="checkbox"
+                        class="input-checkbox"
+                    />Surf
+                </label>
+                <label>
+                    <input
+                        name="prefer"
+                        value="inshore"
+                        type="checkbox"
+                        class="input-checkbox"
+                    />Inshore
+                </label>
+                <label>
+                    <input
+                        name="prefer"
+                        value="offshore"
+                        type="checkbox"
+                        class="input-checkbox"
+                    />Offshore
+                </label>
+                <label>
+                    <input
+                        name="prefer"
+                        value="freshwater"
+                        type="checkbox"
+                        class="input-checkbox"
+                    />Freshwater
+                </label>
+            </div>
+
+            <div class="form-group">
+                <!-- Requirement 15: Textarea for additional comments -->
+                <label for="comments">Any comments or suggestions?</label>
+                <textarea
+                    id="comments"
+                    class="input-textarea"
+                    name="comment"
+                    placeholder="Enter your comment here..."
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <!-- Requirement 16: Button with ID of submit to submit all the inputs -->
+                <button type="submit" id="submit" class="submit-button">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
